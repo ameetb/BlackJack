@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/game">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src= "@drawable/b1fv"
+        android:id="@+id/dealerCard1"
+
+        android:layout_above="@+id/hitButton"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="44dp" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src= "@drawable/b1fv"
+        android:id="@+id/dealerCard2"
+        android:layout_alignTop="@+id/dealerCard1"
+        android:layout_toRightOf="@+id/dealerCard1"
+        android:layout_toEndOf="@+id/dealerCard1" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src= "@drawable/b1fv"
+        android:id="@+id/playerCard2"
+        android:layout_alignTop="@+id/playerCard1"
+        android:layout_toRightOf="@+id/playerCard1"
+        android:layout_toEndOf="@+id/playerCard1" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src= "@drawable/b1fv"
+        android:id="@+id/playerCard1"
+        android:layout_below="@+id/hitButton"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="46dp" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hit"
+        android:id="@+id/hitButton"
+        android:onClick= "hit"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Total Bet"
+        android:id="@+id/totalBet"
+        android:layout_centerVertical="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Stand"
+        android:id="@+id/StandButton"
+        android:onClick= "stand"
+        android:layout_alignTop="@+id/hitButton"
+        android:layout_toLeftOf="@+id/hitButton"
+        android:layout_toStartOf="@+id/hitButton" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Bet 10"
+        android:id="@+id/betButton"
+        android:onClick="addToBet"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/saveBetButton"
+        android:onClick="saveBet"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:text="Save Bet" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Your Money"
+        android:id="@+id/bankroll"
+        android:layout_alignParentBottom="true"
+        android:layout_alignLeft="@+id/hitButton"
+        android:layout_alignStart="@+id/hitButton" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Large Text"
+        android:id="@+id/textView"
+        android:layout_alignParentTop="true"
+        android:layout_toRightOf="@+id/dealerCard2"
+        android:layout_toEndOf="@+id/dealerCard2" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/newGame"
+        android:text="New Game"
+        android:onClick="startNewGame"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+
+</RelativeLayout>
